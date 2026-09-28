@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSpot - Parking History</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="navbar"></div>
+<main class="container">
+    <h1>Parking History</h1>
+    <p class="subtitle">Completed visits. Filter by vehicle number, flat number or date.</p>
+    <div id="message" class="message"></div>
+
+    <div class="card">
+        <form id="searchForm" class="filter-row">
+            <div class="field">
+                <label for="vehicleNumber">Vehicle Number</label>
+                <input type="text" id="vehicleNumber" placeholder="TN38AB1234">
+            </div>
+            <div class="field">
+                <label for="flatNumber">Flat Number</label>
+                <input type="text" id="flatNumber" placeholder="101">
+            </div>
+            <div class="field">
+                <label for="date">Date</label>
+                <input type="date" id="date">
+            </div>
+            <div class="button-row" style="margin-top:0;">
+                <button type="submit">Search</button>
+                <button type="button" class="secondary" id="resetBtn">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="card">
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr><th>Vehicle</th><th>Visitor</th><th>Flat</th><th>Slot</th><th>Entry</th><th>Exit</th><th>Status</th></tr>
+                </thead>
+                <tbody id="historyBody"></tbody>
+            </table>
+        </div>
+    </div>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/history.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSpot - Today's Log</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="navbar"></div>
+<main class="container">
+    <h1>Today's Log</h1>
+    <p class="subtitle">Select a date to see all visitors who entered on that day.</p>
+    <div id="message" class="message"></div>
+
+    <div class="card">
+        <div class="filter-row">
+            <div class="field">
+                <label for="reportDate">Date</label>
+                <input type="date" id="reportDate">
+            </div>
+            <div><button type="button" id="showReportBtn">Show Report</button></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 id="reportTitle">Today's Log</h2>
+        <div class="stats">
+            <div class="stat"><div class="value" id="totalVisitors">0</div><div class="label">Total Visitors</div></div>
+            <div class="stat"><div class="value" id="completedVisits">0</div><div class="label">Completed Visits</div></div>
+            <div class="stat"><div class="value" id="currentlyInside">0</div><div class="label">Currently Inside</div></div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr><th>Vehicle</th><th>Visitor</th><th>Flat</th><th>Slot</th><th>Entry</th><th>Exit</th><th>Status</th></tr>
+                </thead>
+                <tbody id="reportBody"></tbody>
+            </table>
+        </div>
+    </div>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/report.js"></script>
+</body>
+</html>

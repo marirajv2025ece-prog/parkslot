@@ -1,0 +1,122 @@
+/* ParkSpot - simple stylesheet */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #222;
+    background: #f2f4f7;
+}
+
+.navbar {
+    background: #1f3a5f;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 18px;
+}
+.navbar .brand { font-size: 20px; font-weight: bold; margin-right: 10px; }
+.navbar a { color: #dbe6f5; text-decoration: none; padding: 6px 8px; border-radius: 3px; }
+.navbar a:hover { background: #2f5083; }
+.navbar a.active { background: #fff; color: #1f3a5f; font-weight: bold; }
+.navbar .user-box { margin-left: auto; font-size: 14px; }
+.navbar .user-box button { margin-left: 8px; }
+
+.container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
+
+h1 { font-size: 24px; margin: 0 0 4px; }
+h2 { font-size: 18px; margin: 0 0 12px; }
+.subtitle { color: #666; margin: 0 0 18px; }
+
+.card {
+    background: #fff;
+    border: 1px solid #d9dde3;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 18px;
+}
+
+.stats { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; }
+.stat {
+    flex: 1 1 150px;
+    background: #fff;
+    border: 1px solid #d9dde3;
+    border-radius: 4px;
+    padding: 14px;
+    text-align: center;
+}
+.stat .value { font-size: 30px; font-weight: bold; color: #1f3a5f; }
+.stat .label { color: #666; font-size: 14px; }
+
+.slot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.slot { border: 1px solid #ccc; border-radius: 4px; padding: 10px; text-align: center; background: #fff; }
+.slot .slot-no { font-size: 18px; font-weight: bold; }
+.slot .slot-status { font-size: 13px; margin-top: 2px; }
+.slot .slot-vehicle { font-size: 13px; margin-top: 4px; min-height: 16px; }
+.slot.available { border-color: #5aa469; background: #eef8f0; }
+.slot.available .slot-status { color: #2e7d32; }
+.slot.occupied { border-color: #d9534f; background: #fdeeee; }
+.slot.occupied .slot-status { color: #c62828; }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { border: 1px solid #d9dde3; padding: 8px 10px; text-align: left; font-size: 14px; }
+th { background: #e9edf3; }
+tr:nth-child(even) td { background: #fafbfc; }
+.empty { color: #777; text-align: center; padding: 14px; }
+
+.badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-weight: bold; }
+.badge-available, .badge-completed { background: #dff0e2; color: #2e7d32; }
+.badge-occupied, .badge-active { background: #fbe0df; color: #c62828; }
+
+label { display: block; font-weight: bold; margin: 10px 0 4px; }
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #b9c0ca;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: inherit;
+}
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 18px; }
+.checkbox-row { margin-top: 10px; font-weight: normal; }
+.checkbox-row input { width: auto; margin-right: 6px; }
+
+button, .btn {
+    background: #1f3a5f;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+button:hover { background: #2f5083; }
+button.secondary { background: #6b7684; }
+button.danger { background: #c62828; }
+button.danger:hover { background: #a61f1f; }
+button.small { padding: 4px 10px; font-size: 13px; }
+.button-row { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+.filter-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.filter-row .field { flex: 1 1 180px; }
+.filter-row label { margin-top: 0; }
+
+.message { padding: 10px 12px; border-radius: 3px; margin-bottom: 14px; display: none; }
+.message.success { display: block; background: #dff0e2; border: 1px solid #5aa469; color: #1e5a26; }
+.message.error { display: block; background: #fbe0df; border: 1px solid #d9534f; color: #8a1f1c; }
+.message ul { margin: 6px 0 0 18px; padding: 0; }
+
+/* login page */
+.login-box { max-width: 380px; margin: 70px auto; }
+.login-box h1 { text-align: center; color: #1f3a5f; }
+.login-box .subtitle { text-align: center; }
+.login-box button { width: 100%; margin-top: 16px; padding: 10px; }
+.hint { font-size: 13px; color: #666; text-align: center; margin-top: 12px; }
+
+@media (max-width: 600px) {
+    .navbar .user-box { margin-left: 0; }
+}

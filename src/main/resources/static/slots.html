@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSpot - Parking Slots</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="navbar"></div>
+<main class="container">
+    <h1>Parking Slots</h1>
+    <p class="subtitle">Current status of every visitor parking slot.</p>
+    <div id="message" class="message"></div>
+
+    <div class="card">
+        <div class="button-row" style="margin-top:0; margin-bottom:14px;">
+            <button type="button" data-url="/api/slots">All Slots</button>
+            <button type="button" class="secondary" data-url="/api/slots/available">Available Only</button>
+            <button type="button" class="secondary" data-url="/api/slots/occupied">Occupied Only</button>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr><th>Slot</th><th>Status</th><th>Vehicle Number</th><th>Flat Number</th><th>Entry Time</th></tr>
+                </thead>
+                <tbody id="slotsBody"></tbody>
+            </table>
+        </div>
+    </div>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/slots.js"></script>
+</body>
+</html>

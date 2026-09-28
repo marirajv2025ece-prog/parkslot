@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSpot - Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="login-box">
+    <h1>PARKSPOT</h1>
+    <p class="subtitle">Society Visitor Parking Tracker</p>
+
+    <div class="card">
+        <h2>Gate Security Login</h2>
+        <div id="message" class="message"></div>
+        <form id="loginForm" novalidate>
+            <label for="username">Username</label>
+            <input type="text" id="username" autocomplete="username" autofocus>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" autocomplete="current-password">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <p class="hint">Only authorised gate security staff can use this system.</p>
+</div>
+<script src="/js/common.js"></script>
+<script src="/js/login.js"></script>
+</body>
+</html>

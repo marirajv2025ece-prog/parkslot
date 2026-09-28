@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSpot - New Visitor</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="navbar"></div>
+<main class="container">
+    <h1>New Visitor</h1>
+    <p class="subtitle">Enter the visitor details and choose an available slot.</p>
+    <div id="message" class="message"></div>
+
+    <div class="card">
+        <form id="visitorForm" novalidate>
+            <div class="form-grid">
+                <div>
+                    <label for="visitorName">Visitor Name</label>
+                    <input type="text" id="visitorName" maxlength="50">
+                </div>
+                <div>
+                    <label for="mobileNumber">Mobile Number</label>
+                    <input type="text" id="mobileNumber" maxlength="10">
+                </div>
+                <div>
+                    <label for="vehicleNumber">Vehicle Number</label>
+                    <input type="text" id="vehicleNumber" placeholder="TN38AB1234" maxlength="15">
+                </div>
+                <div>
+                    <label for="vehicleType">Vehicle Type</label>
+                    <select id="vehicleType">
+                        <option value="Car">Car</option>
+                        <option value="Bike">Bike</option>
+                        <option value="Scooter">Scooter</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="flatNumber">Flat Being Visited</label>
+                    <select id="flatNumber"></select>
+                </div>
+                <div>
+                    <label for="slotNumber">Parking Slot</label>
+                    <select id="slotNumber"></select>
+                </div>
+            </div>
+            <label for="purpose">Purpose of Visit</label>
+            <input type="text" id="purpose" maxlength="100" placeholder="e.g. Family visit, Delivery">
+
+            <div class="button-row">
+                <button type="submit">Save Entry</button>
+                <button type="reset" class="secondary">Clear</button>
+            </div>
+        </form>
+    </div>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/register.js"></script>
+</body>
+</html>
